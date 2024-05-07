@@ -2,6 +2,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { useForm } from "react-hook-form";
+import { sum } from "./sum";
 
 function App() {
   const { register, watch, handleSubmit } = useForm<{
@@ -54,7 +55,7 @@ function App() {
               })}
             />
           </div>
-          <div>sum is is {a + b}</div>
+          <div>sum is is {sum(a, b)}</div>
           <button type="submit">Submit</button>
           <p>
             Edit <code>src/App.tsx</code> and save to test HMR
